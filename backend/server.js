@@ -21,7 +21,7 @@ const app = express();
 // 2. Middlewares
 // ==========================================
 app.use(cors({
-  origin: 'http://localhost:5173', // Vite ka URL
+  origin: ['http://localhost:5173', 'https://securevault-4ke.pages.dev'], // Vite ka URL
   credentials: true 
 })); // Frontend (Vite/React) ko backend se connect karne allow karta hai
 app.use(express.json({ limit: '50mb' }));
