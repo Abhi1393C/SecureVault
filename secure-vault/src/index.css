@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import "tailwindcss";
+
+.font-allura {
+  font-family: 'Allura', cursive;
+}
+
+/* DOCX Preview Page Styling */
+.docx-wrapper {
+  background: transparent !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.docx-wrapper > section.docx,
+.docx-container section {
+  background: #ffffff !important;
+  color: #111827 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.4) !important;
+  margin-bottom: 24px !important;
+  border-radius: 4px !important;
+  max-width: 100% !important;
+}
+
+.docx-wrapper > section.docx * {
+  color: inherit;
+}
