@@ -222,7 +222,7 @@ const forgotPassword = async (req, res) => {
     await user.save();
 
     // Frontend reset link
-    const resetUrl = `http://localhost:5173/reset-password/${resetToken}`;
+    const resetUrl = `${process.env.FRONTEND_URL || 'http://localhost:5173'}/reset-password/${resetToken}`;
 
     // Tumhara existing emailUtil use karke email bhejna
     const htmlContent = `
