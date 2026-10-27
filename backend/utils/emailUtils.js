@@ -1,11 +1,13 @@
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, // port 465 ke liye true hona chahiye
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+    }
 });
 
 const sendOTP = async (toEmail, otp) => {
